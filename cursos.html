@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Empresa de Cursos de Informática</title>
+    <link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo da Empresa">
+        <h1>Bem-vindo à Empresa de Cursos de Informática</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <h2>Cursos</h2>
+            <li><a href="index.html">Pagina inicial</a></li>
+            <li><a href="#informatica-basica">Informática Básica</a></li>
+            <li><a href="#excel">Excel</a></li>
+            <li><a href="#powerpoint">PowerPoint</a></li>
+            <li><a href="#manutencao">Manutenção de Computador</a></li>
+            <li><a href="#word">Word</a></li>
+            <li><a href="#logica">Lógica de Programação</a></li>
+        </ul>
+    </nav>
+
+    <section id="informatica-basica">
+        <article>
+            <div class="curso">
+                <img src="img/informatica_basica_icon.png" alt="Informática Básica">
+                <div>
+                    <a href="basica.html"><h3>Informática Básica</h3></a>
+                    <p>Valor: R$ 200</p>
+                    <p>Conteúdo: Introdução ao uso do computador, sistema operacional, navegação na internet e muito mais.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="excel">
+        <article>
+            <div class="curso">
+                <img src="img/excel_icon.webp" alt="Curso de Excel">
+                <div>
+                    <a href="excel.html"><h3>Excel</h3></a>
+                    <p>Valor: R$ 300</p>
+                    <p>Conteúdo: Criação de planilhas, fórmulas, gráficos e automação com macros.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="powerpoint">
+        <article>
+            <div class="curso">
+                <img src="img/powerpoint_icon.webp" alt="Curso de PowerPoint">
+                <div>
+                    <h3>PowerPoint</h3>
+                    <p>Valor: R$ 250</p>
+                    <p>Conteúdo: Criação de apresentações profissionais com efeitos visuais e transições.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="manutencao">
+        <article>
+            <div class="curso">
+                <img src="img/manutencao_icon.png" alt="Curso de Manutenção de Computadores">
+                <div>
+                    <h3>Manutenção de Computador</h3>
+                    <p>Valor: R$ 350</p>
+                    <p>Conteúdo: Montagem e manutenção de hardware, instalação de sistemas operacionais e softwares.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="word">
+        <article>
+            <div class="curso">
+                <img src="img/word_icon.png" alt="Curso de Word">
+                <div>
+                    <h3>Word</h3>
+                    <p>Valor: R$ 200</p>
+                    <p>Conteúdo: Criação de documentos, formatação avançada, tabelas e automação de tarefas.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="logica">
+        <article>
+            <div class="curso">
+                <img src="img/logica_icon.png" alt="Curso de Lógica de Programação">
+                <div>
+                    <h3>Lógica de Programação</h3>
+                    <p>Valor: R$ 400</p>
+                    <p>Conteúdo: Fundamentos de algoritmos, lógica condicional, laços de repetição e introdução à programação.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Empresa de Cursos de Informática. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const carrossel = document.querySelector('.carrossel');
+        let index = 0;
+
+        function moveCarrossel() {
+            index++;
+            if (index > 2) {
+                index = 0;
+            }
+            carrossel.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        setInterval(moveCarrossel, 3000);
+    </script>
+</body>
+</html>
